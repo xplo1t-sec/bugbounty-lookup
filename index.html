@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounty Domain Finder</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            margin-top: 30px;
+        }
+
+        .message {
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .error {
+            background-color: rgba(255, 82, 82, 0.8);
+        }
+
+        .success {
+            background-color: rgba(76, 175, 80, 0.8);
+        }
+
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            display: none;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bounty Domain Finder</h1>
+    <p>Enter a domain or URL to check if it's part of a bug bounty program.</p>
+    <input type="text" id="domainInput" placeholder="e.g. https://example.com" onkeydown="handleEnter(event)">
+    <button onclick="checkDomain()">Find Program</button>
+
+    <div class="spinner" id="spinner"></div>
+
+    <div class="result">
+        <div id="resultMessage" class="message" style="display: none;"></div>
+    </div>
+</div>
+
+<script src="client.js"></script>
+</body>
+</html>
