@@ -1,6 +1,6 @@
 let chaosData;
 
-fetch('/public/chaos-bugbounty-list.json')
+fetch('public/chaos-bugbounty-list.json')
     .then(response => response.json())
     .then(data => {
         chaosData = data;
