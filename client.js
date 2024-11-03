@@ -54,7 +54,7 @@ const checkDomainInBountyList = (domain) => {
 
 
 const checkDomain = () => {
-    const domain = document.getElementById('domainInput').value;
+    const domain = document.getElementById('domainInput').value.toLowerCase();
     const resultMessage = document.getElementById('resultMessage');
     const spinner = document.getElementById('spinner');
 
