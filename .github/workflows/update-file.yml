@@ -8,6 +8,8 @@ on:
 jobs:
   update-file:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Repository
@@ -31,7 +33,7 @@ jobs:
           if [[ -n $(git status --porcelain) ]]; then
             git add public/chaos-bugbounty-list.json
             git commit -m "Update file"
-            git push origin main
+            git push origin master
           else
             echo "No changes to commit."
           fi
