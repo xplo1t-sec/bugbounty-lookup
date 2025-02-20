@@ -8274,6 +8274,25 @@
       ]
     },
     {
+      "name": "TECNO",
+      "url": "https://security.tecno.com/dashboard",
+      "bounty": true,
+      "swag": true,
+      "domains": [
+        "tecno-mobile.com",
+        "boomplay.com",
+        "mobile-phantom.com",
+        "palm.tech",
+        "tecno.com",
+        "carlcare.com",
+        "pcconnection.online",
+        "nebulalive.com",
+        "transsion-os.com",
+        "transsion-message.com",
+        "vishavideo.com"
+      ]
+    },
+    {
       "name": "Telefonica",
       "url": "https://bugcrowd.com/telefonicavdp",
       "bounty": false,
